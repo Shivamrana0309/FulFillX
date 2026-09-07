@@ -3,6 +3,7 @@ project(FulfillX VERSION 1.0 DESCRIPTION "Delivery Routing Engine" LANGUAGES CXX
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Set warning flags
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
@@ -18,11 +19,30 @@ file(GLOB LIB_SOURCES "src/CityGraph.cpp" "src/PathFinder.cpp" "src/PackageTree.
 
 add_library(fulfillx_core STATIC ${LIB_SOURCES})
 target_include_directories(fulfillx_core PUBLIC ${CMAKE_SOURCE_DIR}/include)
-target_link_libraries(fulfillx_core PUBLIC Threads::Threads sqlite3)
+target_link_libraries(fulfillx_core PUBLIC Threads::Threads sqlite3 nlohmann_json::nlohmann_json)
+
+include(FetchContent)
+
+# Fetch nlohmann/json
+FetchContent_Declare(
+    nlohmann_json
+    GIT_REPOSITORY https://github.com/nlohmann/json.git
+    GIT_TAG v3.11.3
+)
+FetchContent_MakeAvailable(nlohmann_json)
+
+# Fetch cpp-httplib
+FetchContent_Declare(
+    httplib
+    GIT_REPOSITORY https://github.com/yhirose/cpp-httplib.git
+    GIT_TAG v0.15.3
+)
+FetchContent_MakeAvailable(httplib)
+
 
 # ── Main Executable ──────────────────────────────────────────────────────
 add_executable(fulfillx src/main.cpp)
-target_link_libraries(fulfillx PRIVATE fulfillx_core)
+target_link_libraries(fulfillx PRIVATE fulfillx_core nlohmann_json::nlohmann_json httplib::httplib Threads::Threads)
 
 # ── Google Test (fetched automatically) ──────────────────────────────────
 include(FetchContent)

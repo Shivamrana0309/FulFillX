@@ -775,31 +775,7 @@ CMakeFiles/fulfillx_core.dir/src/DeliveryManager.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/wbuffer_convert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/wstring_convert.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/is_transparent.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/erase_if_container.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle \
-  /Users/shivam/Desktop/Amazon/FulfillX/src/../include/PackageTree.h \
-  /Users/shivam/Desktop/Amazon/FulfillX/src/../include/DatabaseHelper.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sqlite3.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \
-  /Users/shivam/Desktop/Amazon/FulfillX/src/../include/PathFinder.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/json.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/binary_negate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/bind.h \
@@ -813,11 +789,128 @@ CMakeFiles/fulfillx_core.dir/src/DeliveryManager.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/strip_signature.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/boyer_moore_searcher.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/is_transparent.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__hash_table \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/can_extract_key.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/erase_if_container.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__node_handle \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/default_searcher.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/not_fn.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/map.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/set.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/valarray \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_static_assert.h \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_char_like_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/deque.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/queue \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/queue.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/basic_ostream.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/accumulate.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/adjacent_difference.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/inner_product.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/pstl.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/ranges_iota.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/out_value_result.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_exclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_inclusive_scan.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/transform_reduce.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/execution \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_execution_policy.h \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/any \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+  /Users/shivam/Desktop/Amazon/FulfillX/src/../include/PackageTree.h \
+  /Users/shivam/Desktop/Amazon/FulfillX/src/../include/DatabaseHelper.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sqlite3.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/os/availability.h \
+  /Users/shivam/Desktop/Amazon/FulfillX/src/../include/PathFinder.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream

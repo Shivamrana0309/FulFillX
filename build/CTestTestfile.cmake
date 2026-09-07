@@ -5,4 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 include("/Users/shivam/Desktop/Amazon/FulfillX/build/fulfillx_test_e3b0c442_include.cmake")
+subdirs("_deps/nlohmann_json-build")
+subdirs("_deps/httplib-build")
 subdirs("_deps/googletest-build")

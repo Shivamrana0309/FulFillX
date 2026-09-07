@@ -1,72 +1,81 @@
 #include "../include/DeliveryManager.h"
+#include <httplib.h>
+#include <nlohmann/json.hpp>
 #include <iostream>
 #include <string>
-#include <sstream>
 
-void printHelp() {
-    std::cout << "\nAvailable Commands:\n"
-              << "  BOOT <db_path>\n"
-              << "  ADD_PKG <id> <dest_node> <prio> <deadline>\n"
-              << "  DISPATCH <driver_id> <warehouse_node> <max_deadline>\n"
-              << "  LIST_PENDING\n"
-              << "  EXIT\n";
+using json = nlohmann::json;
+
+// Utility to attach CORS headers to every response
+void set_cors_headers(httplib::Response& res) {
+    res.set_header("Access-Control-Allow-Origin", "*");
+    res.set_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.set_header("Access-Control-Allow-Headers", "Content-Type");
 }
 
 int main() {
     DeliveryManager manager;
-    std::string line;
-
-    std::cout << "=== FulfillX: Delivery Routing Engine ===\n";
-    printHelp();
-
-    while (true) {
-        std::cout << "\n> ";
-        if (!std::getline(std::cin, line)) {
-            break; // Handle EOF securely
-        }
-
-        if (line.empty()) continue;
-
-        std::istringstream iss(line);
-        std::string command;
-        iss >> command;
-
-        if (command == "EXIT") {
-            break;
-        } else if (command == "BOOT") {
-            std::string db_path;
-            if (iss >> db_path) {
-                manager.bootSystem(db_path);
-            } else {
-                std::cout << "Usage: BOOT <db_path>\n";
-            }
-        } else if (command == "ADD_PKG") {
-            int id, dest, prio;
-            int64_t deadline;
-            // Robust parsing check to ensure all parameters are valid numbers
-            if (iss >> id >> dest >> prio >> deadline) {
-                manager.handleAddPackage(id, dest, prio, deadline);
-            } else {
-                std::cout << "Usage: ADD_PKG <id> <dest_node> <prio> <deadline>\n";
-            }
-        } else if (command == "DISPATCH") {
-            int driver_id, warehouse_node;
-            int64_t max_deadline;
-            // Robust parsing check for integer arguments
-            if (iss >> driver_id >> warehouse_node >> max_deadline) {
-                manager.handleDispatch(driver_id, warehouse_node, max_deadline);
-            } else {
-                std::cout << "Usage: DISPATCH <driver_id> <warehouse_node> <max_deadline>\n";
-            }
-        } else if (command == "LIST_PENDING") {
-            manager.listPending();
-        } else if (command == "HELP") {
-            printHelp();
-        } else {
-            std::cout << "Unknown command: " << command << ". Type HELP for a list of commands.\n";
-        }
+    
+    std::cout << "[System] Booting FulfillX Engine...\n";
+    if (!manager.bootSystem("fulfillx.db")) {
+        std::cerr << "[System] CRITICAL ERROR: Failed to boot system.\n";
+        return 1;
     }
 
-    std::cout << "Exiting FulfillX Engine...\n";
+    httplib::Server svr;
+
+    // Global Preflight Handler for CORS
+    svr.Options(R"(.*)", [](const httplib::Request&, httplib::Response& res) {
+        set_cors_headers(res);
+        res.status = 204;
+    });
+
+    // Endpoint: GET /api/pending
+    svr.Get("/api/pending", [&manager](const httplib::Request&, httplib::Response& res) {
+        set_cors_headers(res);
+        json response = { 
+            {"status", "success"}, 
+            {"pending_count", manager.getPendingCount()} 
+        };
+        res.set_content(response.dump(), "application/json");
+    });
+
+    // Endpoint: POST /api/dispatch
+    svr.Post("/api/dispatch", [&manager](const httplib::Request& req, httplib::Response& res) {
+        set_cors_headers(res);
+        
+        try {
+            auto body = json::parse(req.body);
+            int driver_id = body.at("driver_id").get<int>();
+            int warehouse_node = body.at("warehouse_node").get<int>();
+            int64_t max_deadline = body.at("max_deadline").get<int64_t>();
+
+            std::optional<DeliveryRoute> route = manager.handleDispatch(driver_id, warehouse_node, max_deadline);
+            
+            if (route) {
+                json response = { 
+                    {"status", "dispatched"}, 
+                    {"route", *route} 
+                };
+                res.set_content(response.dump(), "application/json");
+            } else {
+                json response = { 
+                    {"status", "failed"}, 
+                    {"message", "No packages dispatched"} 
+                };
+                res.status = 404;
+                res.set_content(response.dump(), "application/json");
+            }
+            
+        } catch (const std::exception& e) {
+            res.status = 400; // Bad Request
+            json error = { {"error", "Invalid JSON payload or missing required fields."} };
+            res.set_content(error.dump(), "application/json");
+        }
+    });
+
+    std::cout << "[System] REST API running at http://localhost:8080\n";
+    svr.listen("0.0.0.0", 8080);
+
     return 0;
 }

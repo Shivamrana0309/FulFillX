@@ -17,6 +17,22 @@
 //Builds the googlemock subproject
 BUILD_GMOCK:BOOL=ON
 
+//Build the library as a shared library instead of static. Has
+// no effect if using header-only.
+BUILD_SHARED_LIBS:BOOL=OFF
+
+//The path to Brotli's include directory.
+Brotli_INCLUDE_DIR:PATH=/opt/homebrew/include
+
+//Path to a library.
+Brotli_common:FILEPATH=/opt/homebrew/lib/libbrotlicommon.dylib
+
+//Path to a library.
+Brotli_decoder:FILEPATH=/opt/homebrew/lib/libbrotlidec.dylib
+
+//Path to a library.
+Brotli_encoder:FILEPATH=/opt/homebrew/lib/libbrotlienc.dylib
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -301,11 +317,25 @@ FETCHCONTENT_QUIET:BOOL=ON
 // for googletest
 FETCHCONTENT_SOURCE_DIR_GOOGLETEST:PATH=
 
+//When not empty, overrides where to find pre-populated content
+// for httplib
+FETCHCONTENT_SOURCE_DIR_HTTPLIB:PATH=
+
+//When not empty, overrides where to find pre-populated content
+// for nlohmann_json
+FETCHCONTENT_SOURCE_DIR_NLOHMANN_JSON:PATH=
+
 //Enables UPDATE_DISCONNECTED behavior for all content population
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //Enables UPDATE_DISCONNECTED behavior just for population of googletest
 FETCHCONTENT_UPDATES_DISCONNECTED_GOOGLETEST:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of httplib
+FETCHCONTENT_UPDATES_DISCONNECTED_HTTPLIB:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of nlohmann_json
+FETCHCONTENT_UPDATES_DISCONNECTED_NLOHMANN_JSON:BOOL=OFF
 
 //Value Computed by CMake
 FulfillX_BINARY_DIR:STATIC=/Users/shivam/Desktop/Amazon/FulfillX/build
@@ -323,12 +353,100 @@ GIT_EXECUTABLE:FILEPATH=/opt/homebrew/bin/git
 // added to the build.
 GTEST_HAS_ABSL:BOOL=OFF
 
+//If ON, uses a Python script to split the header into a compilable
+// header & source file (requires Python v3).
+HTTPLIB_COMPILE:BOOL=OFF
+
+//Enables the installation target
+HTTPLIB_INSTALL:BOOL=ON
+
+//Disable the use of C++ exceptions
+HTTPLIB_NO_EXCEPTIONS:BOOL=OFF
+
+//Requires Brotli to be found & linked, or fails build.
+HTTPLIB_REQUIRE_BROTLI:BOOL=OFF
+
+//Requires OpenSSL to be found & linked, or fails build.
+HTTPLIB_REQUIRE_OPENSSL:BOOL=OFF
+
+//Requires ZLIB to be found & linked, or fails build.
+HTTPLIB_REQUIRE_ZLIB:BOOL=OFF
+
+//Enables testing and builds tests
+HTTPLIB_TEST:BOOL=OFF
+
+//Uses Brotli (if available) to enable Brotli decompression support.
+HTTPLIB_USE_BROTLI_IF_AVAILABLE:BOOL=ON
+
+//Enable feature to load system certs from the Apple Keychain.
+HTTPLIB_USE_CERTS_FROM_MACOSX_KEYCHAIN:BOOL=ON
+
+//Uses OpenSSL (if available) to enable HTTPS support.
+HTTPLIB_USE_OPENSSL_IF_AVAILABLE:BOOL=ON
+
+//Uses ZLIB (if available) to enable Zlib compression support.
+HTTPLIB_USE_ZLIB_IF_AVAILABLE:BOOL=ON
+
 //Enable installation of googletest. (Projects embedding googletest
 // may want to turn this OFF.)
 INSTALL_GTEST:BOOL=ON
 
+//Build the unit tests when BUILD_TESTING is enabled.
+JSON_BuildTests:BOOL=OFF
+
+//Enable CI build targets.
+JSON_CI:BOOL=OFF
+
+//Use extended diagnostic messages.
+JSON_Diagnostics:BOOL=OFF
+
+//Disable default integer enum serialization.
+JSON_DisableEnumSerialization:BOOL=OFF
+
+//Place use-defined string literals in the global namespace.
+JSON_GlobalUDLs:BOOL=ON
+
+//Enable implicit conversions.
+JSON_ImplicitConversions:BOOL=ON
+
+//Install CMake targets during install step.
+JSON_Install:BOOL=OFF
+
+//Enable legacy discarded value comparison.
+JSON_LegacyDiscardedValueComparison:BOOL=OFF
+
+//Use non-amalgamated version of the library.
+JSON_MultipleHeaders:BOOL=ON
+
+//Include as system headers (skip for clang-tidy).
+JSON_SystemInclude:BOOL=OFF
+
+//Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/opt/homebrew/lib/libcrypto.dylib
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/opt/homebrew/include
+
+//Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/opt/homebrew/lib/libssl.dylib
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+
+//Path to a file.
+ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+
+//Path to a library.
+ZLIB_LIBRARY_DEBUG:FILEPATH=ZLIB_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+ZLIB_LIBRARY_RELEASE:FILEPATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+
 //Dependencies for the target
-fulfillx_core_LIB_DEPENDS:STATIC=general;sqlite3;
+fulfillx_core_LIB_DEPENDS:STATIC=general;sqlite3;general;nlohmann_json::nlohmann_json;
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/shivam/Desktop/Amazon/FulfillX/build/_deps/googletest-build/googlemock
@@ -376,11 +494,37 @@ gtest_force_shared_crt:BOOL=ON
 //Build gtest with internal symbols hidden in shared libraries.
 gtest_hide_internal_symbols:BOOL=OFF
 
+//Value Computed by CMake
+httplib_BINARY_DIR:STATIC=/Users/shivam/Desktop/Amazon/FulfillX/build/_deps/httplib-build
+
+//Value Computed by CMake
+httplib_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+httplib_SOURCE_DIR:STATIC=/Users/shivam/Desktop/Amazon/FulfillX/build/_deps/httplib-src
+
+//Value Computed by CMake
+nlohmann_json_BINARY_DIR:STATIC=/Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-build
+
+//Value Computed by CMake
+nlohmann_json_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+nlohmann_json_SOURCE_DIR:STATIC=/Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Brotli_INCLUDE_DIR
+Brotli_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Brotli_common
+Brotli_common-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Brotli_decoder
+Brotli_decoder-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Brotli_encoder
+Brotli_encoder-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -516,7 +660,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -569,6 +713,23 @@ FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/opt/homebrew/Frameworks/Python.f
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
+NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
+//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
+OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
+OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_INCLUDE_DIR
+ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_DEBUG
+ZLIB_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: ZLIB_LIBRARY_RELEASE
+ZLIB_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
 //Compiler reason failure

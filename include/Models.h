@@ -3,6 +3,9 @@
 #include <cstdint>
 #include <string>
 #include <vector>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 enum class PackageStatus { PENDING, DISPATCHED, DELIVERED, CANCELLED };
 
@@ -38,3 +41,18 @@ struct DeliveryRoute {
     std::vector<int> delivered_package_ids;
     double total_distance_km;
 };
+
+// =======================================================================
+// JSON Serialization Definitions
+// =======================================================================
+NLOHMANN_JSON_SERIALIZE_ENUM(PackageStatus, {
+    {PackageStatus::PENDING, "PENDING"},
+    {PackageStatus::DISPATCHED, "DISPATCHED"},
+    {PackageStatus::DELIVERED, "DELIVERED"},
+    {PackageStatus::CANCELLED, "CANCELLED"}
+})
+
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Node, id, name, node_type)
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(Package, id, dest_node_id, priority_level, deadline_timestamp, status)
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(RouteLeg, from_node, to_node, leg_distance)
+NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(DeliveryRoute, driver_id, path_nodes, delivered_package_ids, total_distance_km)

@@ -96,6 +96,12 @@ fulfillx_EXTERNAL_OBJECTS =
 fulfillx: CMakeFiles/fulfillx.dir/src/main.cpp.o
 fulfillx: CMakeFiles/fulfillx.dir/build.make
 fulfillx: libfulfillx_core.a
+fulfillx: /opt/homebrew/lib/libbrotlicommon.dylib
+fulfillx: /opt/homebrew/lib/libbrotlienc.dylib
+fulfillx: /opt/homebrew/lib/libbrotlidec.dylib
+fulfillx: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd
+fulfillx: /opt/homebrew/lib/libssl.dylib
+fulfillx: /opt/homebrew/lib/libcrypto.dylib
 fulfillx: CMakeFiles/fulfillx.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable fulfillx"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fulfillx.dir/link.txt --verbose=$(VERBOSE)

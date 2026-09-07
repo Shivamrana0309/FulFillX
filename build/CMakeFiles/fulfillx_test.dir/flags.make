@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/shivam/Desktop/Amazon/FulfillX/include -isystem /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/googletest-src/googletest/include -isystem /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/Users/shivam/Desktop/Amazon/FulfillX/include -I/Users/shivam/Desktop/Amazon/FulfillX/build/_deps/nlohmann_json-src/include -isystem /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/googletest-src/googletest/include -isystem /Users/shivam/Desktop/Amazon/FulfillX/build/_deps/googletest-src/googletest
 
 CXX_FLAGSarm64 = -std=gnu++17 -arch arm64 -Wall -Wextra
 

@@ -6,6 +6,7 @@
 #include "PathFinder.h"
 #include <string>
 #include <vector>
+#include <optional>
 
 class DeliveryManager {
 private:
@@ -18,6 +19,6 @@ public:
 
     bool bootSystem(const std::string& db_path);
     void handleAddPackage(int id, int dest, int prio, int64_t deadline);
-    void handleDispatch(int driver_id, int warehouse_node, int64_t deadline_threshold);
-    void listPending() const;
+    std::optional<DeliveryRoute> handleDispatch(int driver_id, int warehouse_node, int64_t deadline_threshold);
+    size_t getPendingCount() const;
 };

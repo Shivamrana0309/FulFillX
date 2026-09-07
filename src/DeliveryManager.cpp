@@ -33,10 +33,10 @@ void DeliveryManager::handleAddPackage(int id, int dest, int prio, int64_t deadl
     }
 }
 
-void DeliveryManager::handleDispatch(int driver_id, int warehouse_node, int64_t deadline_threshold) {
+std::optional<DeliveryRoute> DeliveryManager::handleDispatch(int driver_id, int warehouse_node, int64_t deadline_threshold) {
     if (!graph.nodeExists(warehouse_node)) {
         std::cerr << "[System] Error: Warehouse node " << warehouse_node << " does not exist.\n";
-        return;
+        return std::nullopt;
     }
 
     std::cout << "[System] Dispatching Driver #" << driver_id << " from " << graph.getNodeName(warehouse_node) << " (Node " << warehouse_node << ")...\n";
@@ -45,7 +45,7 @@ void DeliveryManager::handleDispatch(int driver_id, int warehouse_node, int64_t 
     std::cout << "[System] Pulled " << pkgs.size() << " packages from Priority BST.\n";
 
     if (pkgs.empty()) {
-        return;
+        return std::nullopt;
     }
 
     std::sort(pkgs.begin(), pkgs.end(), [](const Package& a, const Package& b) {
@@ -99,15 +99,16 @@ void DeliveryManager::handleDispatch(int driver_id, int warehouse_node, int64_t 
 
     if (route.delivered_package_ids.empty()) {
         std::cout << "[System] No packages were successfully dispatched.\n";
-        return;
+        return std::nullopt;
     }
 
     db.logDelivery(route);
 
     std::cout << "[System] Route generated: " << route_stream.str() << "\n";
     std::cout << "[System] Total Route Distance: " << route.total_distance_km << " km.\n";
+    return route;
 }
 
-void DeliveryManager::listPending() const {
-    std::cout << "[System] " << tree.size() << " pending packages in the queue.\n";
+size_t DeliveryManager::getPendingCount() const {
+    return tree.size();
 }
