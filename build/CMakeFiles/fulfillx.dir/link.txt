@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o CMakeFiles/fulfillx.dir/src/main.cpp.o -o fulfillx  -lsqlite3

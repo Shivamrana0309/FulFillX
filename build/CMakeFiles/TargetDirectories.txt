@@ -1,0 +1,3 @@
+/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles/fulfillx.dir
+/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles/edit_cache.dir
+/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles/rebuild_cache.dir
