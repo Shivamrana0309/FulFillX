@@ -1,3 +1,5 @@
+[📖 Architecture Deep Dive](ARCHITECTURE.md)
+
 # FulfillX: Delivery Routing Engine
 
 ## 1. Project Overview
@@ -57,4 +59,14 @@ Inside the interactive prompt, run your test sequence:
 > LIST_PENDING
 > DISPATCH 99 1 1700005000
 > EXIT
+```
+
+## 5. Running the Automated Test Suite
+To execute the Google Test suite and verify all core Data Structures and Algorithms independently of the database:
+```bash
+cd build
+./fulfillx_test
+
+# Or run with CTest for structured output:
+ctest --output-on-failure
 ```

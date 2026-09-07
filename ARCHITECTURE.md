@@ -1,3 +1,5 @@
+[🏠 Main README](README.md)
+
 # FulfillX: Project Architecture & Deep Dive
 
 > *The ultimate master guide — from pizza delivery analogies to Dijkstra's Min-Heap.*

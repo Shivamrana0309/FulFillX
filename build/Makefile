@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/shivam/Desktop/Amazon/FulfillX/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/opt/homebrew/bin/ctest $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/opt/homebrew/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/opt/homebrew/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,6 +172,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named fulfillx_core
+
+# Build rule for target.
+fulfillx_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fulfillx_core
+.PHONY : fulfillx_core
+
+# fast build rule for target.
+fulfillx_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/build
+.PHONY : fulfillx_core/fast
+
+#=============================================================================
 # Target rules for targets named fulfillx
 
 # Build rule for target.
@@ -129,12 +197,77 @@ fulfillx/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/build
 .PHONY : fulfillx/fast
 
+#=============================================================================
+# Target rules for targets named fulfillx_test
+
+# Build rule for target.
+fulfillx_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fulfillx_test
+.PHONY : fulfillx_test
+
+# fast build rule for target.
+fulfillx_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_test.dir/build.make CMakeFiles/fulfillx_test.dir/build
+.PHONY : fulfillx_test/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 src/CityGraph.o: src/CityGraph.cpp.o
 .PHONY : src/CityGraph.o
 
 # target to build an object file
 src/CityGraph.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/CityGraph.cpp.o
 .PHONY : src/CityGraph.cpp.o
 
 src/CityGraph.i: src/CityGraph.cpp.i
@@ -142,7 +275,7 @@ src/CityGraph.i: src/CityGraph.cpp.i
 
 # target to preprocess a source file
 src/CityGraph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/CityGraph.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/CityGraph.cpp.i
 .PHONY : src/CityGraph.cpp.i
 
 src/CityGraph.s: src/CityGraph.cpp.s
@@ -150,7 +283,7 @@ src/CityGraph.s: src/CityGraph.cpp.s
 
 # target to generate assembly for a file
 src/CityGraph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/CityGraph.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/CityGraph.cpp.s
 .PHONY : src/CityGraph.cpp.s
 
 src/DatabaseHelper.o: src/DatabaseHelper.cpp.o
@@ -158,7 +291,7 @@ src/DatabaseHelper.o: src/DatabaseHelper.cpp.o
 
 # target to build an object file
 src/DatabaseHelper.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/DatabaseHelper.cpp.o
 .PHONY : src/DatabaseHelper.cpp.o
 
 src/DatabaseHelper.i: src/DatabaseHelper.cpp.i
@@ -166,7 +299,7 @@ src/DatabaseHelper.i: src/DatabaseHelper.cpp.i
 
 # target to preprocess a source file
 src/DatabaseHelper.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/DatabaseHelper.cpp.i
 .PHONY : src/DatabaseHelper.cpp.i
 
 src/DatabaseHelper.s: src/DatabaseHelper.cpp.s
@@ -174,7 +307,7 @@ src/DatabaseHelper.s: src/DatabaseHelper.cpp.s
 
 # target to generate assembly for a file
 src/DatabaseHelper.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/DatabaseHelper.cpp.s
 .PHONY : src/DatabaseHelper.cpp.s
 
 src/DeliveryManager.o: src/DeliveryManager.cpp.o
@@ -182,7 +315,7 @@ src/DeliveryManager.o: src/DeliveryManager.cpp.o
 
 # target to build an object file
 src/DeliveryManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/DeliveryManager.cpp.o
 .PHONY : src/DeliveryManager.cpp.o
 
 src/DeliveryManager.i: src/DeliveryManager.cpp.i
@@ -190,7 +323,7 @@ src/DeliveryManager.i: src/DeliveryManager.cpp.i
 
 # target to preprocess a source file
 src/DeliveryManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/DeliveryManager.cpp.i
 .PHONY : src/DeliveryManager.cpp.i
 
 src/DeliveryManager.s: src/DeliveryManager.cpp.s
@@ -198,7 +331,7 @@ src/DeliveryManager.s: src/DeliveryManager.cpp.s
 
 # target to generate assembly for a file
 src/DeliveryManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/DeliveryManager.cpp.s
 .PHONY : src/DeliveryManager.cpp.s
 
 src/PackageTree.o: src/PackageTree.cpp.o
@@ -206,7 +339,7 @@ src/PackageTree.o: src/PackageTree.cpp.o
 
 # target to build an object file
 src/PackageTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/PackageTree.cpp.o
 .PHONY : src/PackageTree.cpp.o
 
 src/PackageTree.i: src/PackageTree.cpp.i
@@ -214,7 +347,7 @@ src/PackageTree.i: src/PackageTree.cpp.i
 
 # target to preprocess a source file
 src/PackageTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/PackageTree.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/PackageTree.cpp.i
 .PHONY : src/PackageTree.cpp.i
 
 src/PackageTree.s: src/PackageTree.cpp.s
@@ -222,7 +355,7 @@ src/PackageTree.s: src/PackageTree.cpp.s
 
 # target to generate assembly for a file
 src/PackageTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/PackageTree.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/PackageTree.cpp.s
 .PHONY : src/PackageTree.cpp.s
 
 src/PathFinder.o: src/PathFinder.cpp.o
@@ -230,7 +363,7 @@ src/PathFinder.o: src/PathFinder.cpp.o
 
 # target to build an object file
 src/PathFinder.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/PathFinder.cpp.o
 .PHONY : src/PathFinder.cpp.o
 
 src/PathFinder.i: src/PathFinder.cpp.i
@@ -238,7 +371,7 @@ src/PathFinder.i: src/PathFinder.cpp.i
 
 # target to preprocess a source file
 src/PathFinder.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/PathFinder.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/PathFinder.cpp.i
 .PHONY : src/PathFinder.cpp.i
 
 src/PathFinder.s: src/PathFinder.cpp.s
@@ -246,7 +379,7 @@ src/PathFinder.s: src/PathFinder.cpp.s
 
 # target to generate assembly for a file
 src/PathFinder.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/PathFinder.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_core.dir/build.make CMakeFiles/fulfillx_core.dir/src/PathFinder.cpp.s
 .PHONY : src/PathFinder.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -273,6 +406,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx.dir/build.make CMakeFiles/fulfillx.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+test/test_dsa.o: test/test_dsa.cpp.o
+.PHONY : test/test_dsa.o
+
+# target to build an object file
+test/test_dsa.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_test.dir/build.make CMakeFiles/fulfillx_test.dir/test/test_dsa.cpp.o
+.PHONY : test/test_dsa.cpp.o
+
+test/test_dsa.i: test/test_dsa.cpp.i
+.PHONY : test/test_dsa.i
+
+# target to preprocess a source file
+test/test_dsa.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_test.dir/build.make CMakeFiles/fulfillx_test.dir/test/test_dsa.cpp.i
+.PHONY : test/test_dsa.cpp.i
+
+test/test_dsa.s: test/test_dsa.cpp.s
+.PHONY : test/test_dsa.s
+
+# target to generate assembly for a file
+test/test_dsa.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/fulfillx_test.dir/build.make CMakeFiles/fulfillx_test.dir/test/test_dsa.cpp.s
+.PHONY : test/test_dsa.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -280,8 +437,19 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... fulfillx"
+	@echo "... fulfillx_core"
+	@echo "... fulfillx_test"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... src/CityGraph.o"
 	@echo "... src/CityGraph.i"
 	@echo "... src/CityGraph.s"
@@ -300,6 +468,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... test/test_dsa.o"
+	@echo "... test/test_dsa.i"
+	@echo "... test/test_dsa.s"
 .PHONY : help
 
 

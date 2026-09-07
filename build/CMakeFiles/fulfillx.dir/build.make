@@ -72,80 +72,10 @@ include CMakeFiles/fulfillx.dir/flags.make
 CMakeFiles/fulfillx.dir/codegen:
 .PHONY : CMakeFiles/fulfillx.dir/codegen
 
-CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o: CMakeFiles/fulfillx.dir/flags.make
-CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o: /Users/shivam/Desktop/Amazon/FulfillX/src/CityGraph.cpp
-CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o: CMakeFiles/fulfillx.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o -MF CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o.d -o CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o -c /Users/shivam/Desktop/Amazon/FulfillX/src/CityGraph.cpp
-
-CMakeFiles/fulfillx.dir/src/CityGraph.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fulfillx.dir/src/CityGraph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivam/Desktop/Amazon/FulfillX/src/CityGraph.cpp > CMakeFiles/fulfillx.dir/src/CityGraph.cpp.i
-
-CMakeFiles/fulfillx.dir/src/CityGraph.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fulfillx.dir/src/CityGraph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivam/Desktop/Amazon/FulfillX/src/CityGraph.cpp -o CMakeFiles/fulfillx.dir/src/CityGraph.cpp.s
-
-CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o: CMakeFiles/fulfillx.dir/flags.make
-CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o: /Users/shivam/Desktop/Amazon/FulfillX/src/DatabaseHelper.cpp
-CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o: CMakeFiles/fulfillx.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o -MF CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o.d -o CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o -c /Users/shivam/Desktop/Amazon/FulfillX/src/DatabaseHelper.cpp
-
-CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivam/Desktop/Amazon/FulfillX/src/DatabaseHelper.cpp > CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.i
-
-CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivam/Desktop/Amazon/FulfillX/src/DatabaseHelper.cpp -o CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.s
-
-CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o: CMakeFiles/fulfillx.dir/flags.make
-CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o: /Users/shivam/Desktop/Amazon/FulfillX/src/DeliveryManager.cpp
-CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o: CMakeFiles/fulfillx.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o -MF CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o.d -o CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o -c /Users/shivam/Desktop/Amazon/FulfillX/src/DeliveryManager.cpp
-
-CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivam/Desktop/Amazon/FulfillX/src/DeliveryManager.cpp > CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.i
-
-CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivam/Desktop/Amazon/FulfillX/src/DeliveryManager.cpp -o CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.s
-
-CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o: CMakeFiles/fulfillx.dir/flags.make
-CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o: /Users/shivam/Desktop/Amazon/FulfillX/src/PackageTree.cpp
-CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o: CMakeFiles/fulfillx.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o -MF CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o.d -o CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o -c /Users/shivam/Desktop/Amazon/FulfillX/src/PackageTree.cpp
-
-CMakeFiles/fulfillx.dir/src/PackageTree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fulfillx.dir/src/PackageTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivam/Desktop/Amazon/FulfillX/src/PackageTree.cpp > CMakeFiles/fulfillx.dir/src/PackageTree.cpp.i
-
-CMakeFiles/fulfillx.dir/src/PackageTree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fulfillx.dir/src/PackageTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivam/Desktop/Amazon/FulfillX/src/PackageTree.cpp -o CMakeFiles/fulfillx.dir/src/PackageTree.cpp.s
-
-CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o: CMakeFiles/fulfillx.dir/flags.make
-CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o: /Users/shivam/Desktop/Amazon/FulfillX/src/PathFinder.cpp
-CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o: CMakeFiles/fulfillx.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o -MF CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o.d -o CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o -c /Users/shivam/Desktop/Amazon/FulfillX/src/PathFinder.cpp
-
-CMakeFiles/fulfillx.dir/src/PathFinder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/fulfillx.dir/src/PathFinder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/shivam/Desktop/Amazon/FulfillX/src/PathFinder.cpp > CMakeFiles/fulfillx.dir/src/PathFinder.cpp.i
-
-CMakeFiles/fulfillx.dir/src/PathFinder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/fulfillx.dir/src/PathFinder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/shivam/Desktop/Amazon/FulfillX/src/PathFinder.cpp -o CMakeFiles/fulfillx.dir/src/PathFinder.cpp.s
-
 CMakeFiles/fulfillx.dir/src/main.cpp.o: CMakeFiles/fulfillx.dir/flags.make
 CMakeFiles/fulfillx.dir/src/main.cpp.o: /Users/shivam/Desktop/Amazon/FulfillX/src/main.cpp
 CMakeFiles/fulfillx.dir/src/main.cpp.o: CMakeFiles/fulfillx.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/fulfillx.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/fulfillx.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/fulfillx.dir/src/main.cpp.o -MF CMakeFiles/fulfillx.dir/src/main.cpp.o.d -o CMakeFiles/fulfillx.dir/src/main.cpp.o -c /Users/shivam/Desktop/Amazon/FulfillX/src/main.cpp
 
 CMakeFiles/fulfillx.dir/src/main.cpp.i: cmake_force
@@ -158,25 +88,16 @@ CMakeFiles/fulfillx.dir/src/main.cpp.s: cmake_force
 
 # Object files for target fulfillx
 fulfillx_OBJECTS = \
-"CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o" \
-"CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o" \
-"CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o" \
-"CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o" \
-"CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o" \
 "CMakeFiles/fulfillx.dir/src/main.cpp.o"
 
 # External object files for target fulfillx
 fulfillx_EXTERNAL_OBJECTS =
 
-fulfillx: CMakeFiles/fulfillx.dir/src/CityGraph.cpp.o
-fulfillx: CMakeFiles/fulfillx.dir/src/DatabaseHelper.cpp.o
-fulfillx: CMakeFiles/fulfillx.dir/src/DeliveryManager.cpp.o
-fulfillx: CMakeFiles/fulfillx.dir/src/PackageTree.cpp.o
-fulfillx: CMakeFiles/fulfillx.dir/src/PathFinder.cpp.o
 fulfillx: CMakeFiles/fulfillx.dir/src/main.cpp.o
 fulfillx: CMakeFiles/fulfillx.dir/build.make
+fulfillx: libfulfillx_core.a
 fulfillx: CMakeFiles/fulfillx.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable fulfillx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/shivam/Desktop/Amazon/FulfillX/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable fulfillx"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fulfillx.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
