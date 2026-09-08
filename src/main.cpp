@@ -74,6 +74,28 @@ int main() {
         }
     });
 
+    // Endpoint: POST /api/package
+    svr.Post("/api/package", [&manager](const httplib::Request& req, httplib::Response& res) {
+        set_cors_headers(res);
+        try {
+            auto body = json::parse(req.body);
+            int id = body.at("id").get<int>();
+            int dest_node = body.at("dest_node").get<int>();
+            int priority = body.at("priority").get<int>();
+            int64_t deadline = body.at("deadline").get<int64_t>();
+
+            manager.handleAddPackage(id, dest_node, priority, deadline);
+            
+            json response = { {"status", "success"}, {"message", "Package added to BST and Database"} };
+            res.set_content(response.dump(), "application/json");
+        } catch (const std::exception& e) {
+            std::cout << "JSON Parse Error: " << e.what() << std::endl;
+            res.status = 400;
+            json error = { {"error", "Invalid JSON payload or missing fields."} };
+            res.set_content(error.dump(), "application/json");
+        }
+    });
+
     std::cout << "[System] REST API running at http://localhost:8080\n";
     svr.listen("0.0.0.0", 8080);
 
