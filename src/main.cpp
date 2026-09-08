@@ -74,6 +74,14 @@ int main() {
         }
     });
 
+    // Global handler for CORS Preflight requests
+    svr.Options(".*", [](const httplib::Request& req, httplib::Response& res) {
+        res.set_header("Access-Control-Allow-Origin", "*");
+        res.set_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+        res.set_header("Access-Control-Allow-Headers", "Content-Type");
+        res.status = 200;
+    });
+
     // Endpoint: POST /api/package
     svr.Post("/api/package", [&manager](const httplib::Request& req, httplib::Response& res) {
         set_cors_headers(res);
