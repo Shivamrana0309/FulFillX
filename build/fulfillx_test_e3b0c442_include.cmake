@@ -1,5 +1,0 @@
-if(EXISTS "/Users/shivam/Desktop/Amazon/FulfillX/build/fulfillx_test_e3b0c442_tests.cmake")
-  include("/Users/shivam/Desktop/Amazon/FulfillX/build/fulfillx_test_e3b0c442_tests.cmake")
-else()
-  add_test(fulfillx_test_NOT_BUILT fulfillx_test_NOT_BUILT)
-endif()

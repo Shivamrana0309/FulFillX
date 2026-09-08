@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/fulfillx_test.dir/test/test_dsa.cpp.o -o fulfillx_test  libfulfillx_core.a lib/libgtest.a lib/libgtest_main.a -lsqlite3 lib/libgtest.a

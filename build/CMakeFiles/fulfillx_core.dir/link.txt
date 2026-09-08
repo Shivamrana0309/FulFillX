@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfulfillx_core.a CMakeFiles/fulfillx_core.dir/src/CityGraph.cpp.o CMakeFiles/fulfillx_core.dir/src/DatabaseHelper.cpp.o CMakeFiles/fulfillx_core.dir/src/DeliveryManager.cpp.o CMakeFiles/fulfillx_core.dir/src/PackageTree.cpp.o CMakeFiles/fulfillx_core.dir/src/PathFinder.cpp.o
-/usr/bin/ranlib libfulfillx_core.a

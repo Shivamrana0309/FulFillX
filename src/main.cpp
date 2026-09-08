@@ -76,6 +76,7 @@ int main() {
 
     // Global handler for CORS Preflight requests
     svr.Options(".*", [](const httplib::Request& req, httplib::Response& res) {
+        (void)req; // Supress unused parameter warning
         res.set_header("Access-Control-Allow-Origin", "*");
         res.set_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
         res.set_header("Access-Control-Allow-Headers", "Content-Type");
